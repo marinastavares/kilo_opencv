@@ -1,9 +1,3 @@
-/*
- * File:   main.cpp
- * Author: sagar
- *
- * Created on 10 September, 2012, 7:48 PM
- */
 
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
@@ -92,7 +86,7 @@ int main() {
         //for (auto i = corners.begin(); i != corners.end(); ++i)
          //   cout << *i << " cabou ";
     
-        cornersSize=corners.size();
+        cornersSize = corners.size();
         
         ofstream file;
         file.open ("ids_xy.txt");
@@ -111,7 +105,7 @@ int main() {
             ListaKilobots[ids[k]].x=xf;
             ListaKilobots[ids[k]].y=yf;
             cout << ids[k];
-            // file << ids[k] << "=" << xf << "," << yf << "\n" ;
+            file << ids[k] << "=" << xf << "," << yf << "\n" ;
         }
         file.close();
 

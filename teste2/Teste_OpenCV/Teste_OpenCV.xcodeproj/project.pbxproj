@@ -113,6 +113,7 @@
 		CEB2008D21A6E4070055689D /* libopencv_shape.3.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_shape.3.4.2.dylib; path = ../../../../../../usr/local/Cellar/opencv/3.4.2/lib/libopencv_shape.3.4.2.dylib; sourceTree = "<group>"; };
 		CEB200E421A6E4F90055689D /* br9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = br9.jpg; path = ../../../../../Downloads/br9.jpg; sourceTree = "<group>"; };
 		CEB2013921A80CB70055689D /* tentativa1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = tentativa1.mov; path = ../../../../../Dev_Kilobots/kilobots/kilobots_tests/tentativa1.mov; sourceTree = "<group>"; };
+		CEB2013A21ADD6D70055689D /* id_xy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = id_xy.txt; path = ../../../../../Downloads/id_xy.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +232,7 @@
 		CEB2003021A6DF470055689D /* Teste_OpenCV */ = {
 			isa = PBXGroup;
 			children = (
+				CEB2013A21ADD6D70055689D /* id_xy.txt */,
 				CEB2013921A80CB70055689D /* tentativa1.mov */,
 				CEB200E421A6E4F90055689D /* br9.jpg */,
 				CEB2003121A6DF470055689D /* main.cpp */,
