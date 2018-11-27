@@ -8,17 +8,10 @@
 #include <map>
 #include <fstream>
 #include <errno.h>
+#include "FindCenter.hpp"
 using namespace cv;
 using namespace std;
 
-
-int FindCenterX (float x1, float x2, float x3, float x4){
-    float xf;
-    
-    xf=(x1+x2+x3+x4)/4;
-    
-    return xf;
-}
 
 int main() {
     
@@ -103,8 +96,8 @@ int main() {
             pos3.y=corners.at(k).at(2).y;
             pos4.x=corners.at(k).at(3).x;
             pos4.y=corners.at(k).at(3).y;
-            xf=FindCenterX(pos1.x, pos2.x, pos3.x, pos4.x);
-            yf=FindCenterX(pos1.y, pos2.y, pos3.y, pos4.y);
+            xf=FindCenter(pos1.x, pos2.x, pos3.x, pos4.x);
+            yf=FindCenter(pos1.y, pos2.y, pos3.y, pos4.y);
             ListaKilobots[ids[k]].x=xf;
             ListaKilobots[ids[k]].y=yf;
             ss << ids[k];

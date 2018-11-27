@@ -51,6 +51,7 @@
 		CEB200E121A6E4070055689D /* libopencv_ximgproc.3.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB2008B21A6E4070055689D /* libopencv_ximgproc.3.4.2.dylib */; };
 		CEB200E221A6E4070055689D /* libopencv_videostab.3.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB2008C21A6E4070055689D /* libopencv_videostab.3.4.2.dylib */; };
 		CEB200E321A6E4070055689D /* libopencv_shape.3.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB2008D21A6E4070055689D /* libopencv_shape.3.4.2.dylib */; };
+		CEB2013D21ADDDBC0055689D /* FindCenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEB2013B21ADDDBC0055689D /* FindCenter.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -114,6 +115,8 @@
 		CEB200E421A6E4F90055689D /* br9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = br9.jpg; path = ../../../../../Downloads/br9.jpg; sourceTree = "<group>"; };
 		CEB2013921A80CB70055689D /* tentativa1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = tentativa1.mov; path = ../../../../../Dev_Kilobots/kilobots/kilobots_tests/tentativa1.mov; sourceTree = "<group>"; };
 		CEB2013A21ADD6D70055689D /* id_xy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = id_xy.txt; path = ../../../../../Downloads/id_xy.txt; sourceTree = "<group>"; };
+		CEB2013B21ADDDBC0055689D /* FindCenter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FindCenter.cpp; sourceTree = "<group>"; };
+		CEB2013C21ADDDBC0055689D /* FindCenter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FindCenter.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +239,8 @@
 				CEB2013921A80CB70055689D /* tentativa1.mov */,
 				CEB200E421A6E4F90055689D /* br9.jpg */,
 				CEB2003121A6DF470055689D /* main.cpp */,
+				CEB2013B21ADDDBC0055689D /* FindCenter.cpp */,
+				CEB2013C21ADDDBC0055689D /* FindCenter.hpp */,
 			);
 			path = Teste_OpenCV;
 			sourceTree = "<group>";
@@ -297,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEB2003221A6DF470055689D /* main.cpp in Sources */,
+				CEB2013D21ADDDBC0055689D /* FindCenter.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
