@@ -24,6 +24,9 @@ int main() {
     
     int cornersSize;
     float xf,yf;
+    stringstream ss;
+    string str;
+    
     
     char filename[ ] = "id_xy.txt";
     fstream appendFileToWorkWith;
@@ -104,15 +107,16 @@ int main() {
             yf=FindCenterX(pos1.y, pos2.y, pos3.y, pos4.y);
             ListaKilobots[ids[k]].x=xf;
             ListaKilobots[ids[k]].y=yf;
-            cout << ids[k];
-            file << ids[k] << "=" << xf << "," << yf << "\n" ;
+            ss << ids[k];
+            str = ss.str();
+            cout << ids[k] << "      \n";
+            circle(frame, Point(xf,yf), 40, (0,255,255));
+            putText(frame,str,Point(xf+4,yf+4),FONT_HERSHEY_SIMPLEX,1,Scalar(128));
+            ss.str(std::string());
+            
         }
         file.close();
 
-        // if at least one marker detected
-        if (ids.size() > 0)
-            cv::aruco::drawDetectedMarkers(frame, corners, ids);
-        
         // Display the resulting frame
         imshow( "Frame", frame );
         
