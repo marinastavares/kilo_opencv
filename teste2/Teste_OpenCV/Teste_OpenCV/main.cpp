@@ -109,9 +109,8 @@ int main() {
             ListaKilobots[ids[k]].y=yf;
             ss << ids[k];
             str = ss.str();
-            cout << ids[k] << "      \n";
-            circle(frame, Point(xf,yf), 40, (0,255,255));
-            putText(frame,str,Point(xf+4,yf+4),FONT_HERSHEY_SIMPLEX,1,Scalar(128));
+            circle(frame, Point(xf,yf), 40, (0,0,255));
+            putText(frame,str,Point(xf+10,yf+10),FONT_HERSHEY_SIMPLEX,1,Scalar(128));
             ss.str(std::string());
             
         }
