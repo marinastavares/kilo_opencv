@@ -9,8 +9,14 @@
 #ifndef FindCenter_hpp
 #define FindCenter_hpp
 
+#include <fstream>
 #include <stdio.h>
+#include <iostream>
+#include <errno.h>
+using namespace std;
 
 int FindCenter (float x1, float x2, float x3, float x4);
+
+void file_txt (char filename[]);
 
 #endif /* FindCenter_hpp */

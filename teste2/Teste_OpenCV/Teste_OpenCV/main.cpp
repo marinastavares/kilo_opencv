@@ -1,4 +1,3 @@
-
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/imgcodecs/imgcodecs.hpp>
@@ -6,12 +5,10 @@
 #include <opencv2/aruco.hpp>
 #include <iostream>
 #include <map>
-#include <fstream>
 #include <errno.h>
 #include "FindCenter.hpp"
-using namespace cv;
-using namespace std;
 
+using namespace cv;
 
 int main() {
     
@@ -20,33 +17,8 @@ int main() {
     stringstream ss;
     string str;
     
-    
-    char filename[ ] = "id_xy.txt";
-    fstream appendFileToWorkWith;
-    
-    appendFileToWorkWith.open(filename, std::fstream::in | std::fstream::out | std::fstream::app);
-    
-    
-    // If file does not exist, Create new file
-    if (!appendFileToWorkWith )
-    {
-        cout << "Cannot open file, file does not exist. Creating new file..";
-        
-        appendFileToWorkWith.open(filename,  fstream::in | fstream::out | fstream::trunc);
-        appendFileToWorkWith <<"\n";
-        appendFileToWorkWith.close();
-        
-    }
-    else
-    {    // use existing file
-        cout<<"success "<<filename <<" found. \n";
-        cout<<"\nAppending writing and working with existing file"<<"\n---\n";
-        
-        appendFileToWorkWith << "Appending writing and working with existing file"<<"\n---\n";
-        appendFileToWorkWith.close();
-        cout<<"\n";
-        
-    }
+    char arquivo[] ="/Users/marinastavares/Dev_Kilogui/kilo_opencv/teste2/Teste_OpenCV/Teste_OpenCV/id_xy.txt";
+    file_txt(arquivo);
     
     
     VideoCapture cap("/Users/marinastavares/Dev_Kilobots/kilobots/kilobots_tests/tentativa1.mov");
@@ -80,12 +52,12 @@ int main() {
         
         //cout << "Output of begin and end: ";
         //for (auto i = corners.begin(); i != corners.end(); ++i)
-         //   cout << *i << " cabou ";
-    
+        //   cout << *i << " cabou ";
+        
         cornersSize = corners.size();
         
         ofstream file;
-        file.open ("ids_xy.txt");
+        file.open ("/Users/marinastavares/Dev_Kilogui/kilo_opencv/teste2/Teste_OpenCV/Teste_OpenCV/id_xy.txt");
         
         for (int k = 0; k < cornersSize; ++k) {
             pos1.x=corners.at(k).at(0).x;
@@ -102,13 +74,14 @@ int main() {
             ListaKilobots[ids[k]].y=yf;
             ss << ids[k];
             str = ss.str();
+            file << str << " " << xf << " , " << yf << "\n";
             circle(frame, Point(xf,yf), 40, (0,0,255));
             putText(frame,str,Point(xf+10,yf+10),FONT_HERSHEY_SIMPLEX,1,Scalar(128));
             ss.str(std::string());
             
         }
         file.close();
-
+        
         // Display the resulting frame
         imshow( "Frame", frame );
         
